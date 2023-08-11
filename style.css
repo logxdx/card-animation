@@ -1,0 +1,129 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #D2D3D8;
+    background-size: cover
+}
+
+.title {
+    height: 300px;
+    padding-bottom: 20px;
+    color: #65575C;
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    text-decoration: underline #424F5B;
+    font-weight: 600;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.wrapper {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    height: 400px;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: start;
+}
+
+.card {
+    width: 80px;
+    padding-bottom: 10px;
+    background-size: cover;
+    cursor: pointer;
+    overflow: hidden;
+    border-radius: 2rem;
+    margin: 0 20px;
+    display: flex;
+    align-items: flex-end;
+    transition: .6s cubic-bezier(0.28,-0.03,0,0.99);
+    box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.8);
+}
+
+.card > .row {
+    color: white;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.card > .row > .icon {
+    position: relative;
+    top: 70px;
+    color: white;
+    background-color: #424F5B;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+}
+
+.card > .row > .description {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 5px;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    overflow: hidden;
+    height: 150px;
+    width: 500px;
+    opacity: 0;
+    transform: translateY(30px);
+    transition-delay: 0.3s;
+    transition: all 0.3s ease;
+}
+
+.description p {
+    color: rgb(209, 209, 209);
+    padding-top: 10px;
+}
+
+.description h4 {
+    text-transform: uppercase;
+}
+
+input {
+    display: none;
+}
+
+input:checked + label {
+    width: 600px;
+}
+
+input:checked + label .description {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+}
+
+
+.card[for="c1"] {
+    background-image: url(./images/gojo-satoru.jpg);
+}
+
+.card[for="c2"] {
+    background-image: url(./images/geto.webp);
+}
+
+.card[for="c3"] {
+    background-image: url(./images/fushiguro\ \(2\).jpg);
+}
+
+.card[for="c4"] {
+    background-image: url(./images/itadori.jpg);
+}
